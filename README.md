@@ -27,4 +27,9 @@ source venv/bin/activate
 # INSTALL package
 ```sh
   pip3 install opencv-contrib-python
+  pip3 install matplotlib
 ```
+
+# Folder creation
+1. Create folder `captured`
+2. Create folder `dropped`

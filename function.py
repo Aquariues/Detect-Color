@@ -7,11 +7,11 @@ from matplotlib import gridspec as gridspec
 def rgb2hex(r,g,b):
 	return "#{:02x}{:02x}{:02x}".format(r,g,b)
 
-def center_square(height, width):
+def center_square(height, width, squa_range = 2):
 	if height <= width :
-		p_range = int(height / 2)
+		p_range = int(height / squa_range)
 	else :
-		p_range = int(width / 2)
+		p_range = int(width / squa_range)
 
 	y = int((height / 2) - (p_range / 2))
 	x = int((width / 2) - (p_range / 2))
@@ -23,7 +23,7 @@ def detectcolor(url, cvt_color=cv.IMREAD_UNCHANGED):
 	
 	list_colors_hex = {}
 	list_colors_rgb = {}
-	y_point, x_point, p_range = center_square(img.shape[0], img.shape[1])
+	y_point, x_point, p_range = center_square(img.shape[0], img.shape[1], squa_range=4)
 
 	# take colors
 	for i in range(x_point, x_point + p_range):
