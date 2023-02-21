@@ -17,15 +17,18 @@ def center_square(height, width, squa_range = 2):
 	x = int((width / 2) - (p_range / 2))
 	return y, x, p_range
 
-def resize_templ(templ, percent):
-  percent = int(percent)
-  width = int(templ.shape[1] * percent / 100)
-  height = int(templ.shape[0] * percent / 100)
-  resized = cv.resize(templ, (width, height), interpolation=cv.INTER_AREA)
+def resize_templ(templ, p_range):
+  p_range = int(p_range)
+  resized = cv.resize(templ, (p_range, p_range), interpolation=cv.INTER_AREA)
   return resized
 
 def capture_image(path, frame):
   cv.imwrite(path, frame)
+
+def compare_corrected_color(r, g, b, num):
+	
+	r_diff, g_diff, b_diff = 0, 0 ,0
+	return r_diff, g_diff, b_diff
 
 def detectcolor(url, cvt_color=cv.IMREAD_UNCHANGED):
 	# imread stored image as BGR
