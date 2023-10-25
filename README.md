@@ -13,7 +13,7 @@ python3 -m venv venv
 
 # SET ENV ( SKIP THIS )
 ```sh
-set VIRTUAL_ENV "$pwd/singhealth-jaundice/venv"
+set VIRTUAL_ENV "$pwd/detect-color/venv"
 ```
 
 # Active ENV 

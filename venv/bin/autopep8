@@ -1,4 +1,4 @@
-#!/Users/mac/Project/singhealth-jaundice/venv/bin/python
+#!/Users/mac/Project/detect-color/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
